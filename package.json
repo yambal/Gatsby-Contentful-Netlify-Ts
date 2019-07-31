@@ -34,13 +34,14 @@
   "license": "MIT",
   "scripts": {
     "clean": "gatsby clean",
-    "build": "gatsby build",
     "develop": "gatsby clean && yarn run build:css && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "build:css": "yarn tailwind build src/style/tailwind.css -o src/style/dist/layout.scss -c tailwind.config.js"
+    "build": "run-p build:**",
+    "build:css": "yarn tailwind build src/style/tailwind.css -o src/style/dist/layout.scss -c tailwind.config.js",
+    "build:app": "npm run clean && gatsby build",
   },
   "repository": {
     "type": "git",
