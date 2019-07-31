@@ -41,6 +41,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "build": "run-p build:**",
+    "build:clean": "gatsby clean",
     "build:css": "yarn tailwind build src/style/tailwind.css -o src/style/dist/layout.scss -c tailwind.config.js",
     "build:app": "gatsby build"
   },
