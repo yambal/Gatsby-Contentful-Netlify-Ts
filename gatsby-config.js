@@ -1,3 +1,5 @@
+console.log('process', process.env.npm_lifecycle_event)
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -5,6 +7,13 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `ecvfg1u6ein7`,
+        accessToken: '_AFpwJLCkmwQdAuiXsopy7js7dbzOKCCeDQrMkLXyFk',
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     {
